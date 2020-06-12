@@ -23,7 +23,7 @@ $pdo = db_conn();
 $stmt = $pdo->prepare("UPDATE gs_bm_table SET book=:book,url=:url,memo=:memo WHERE id=:id");
 $stmt->bindValue(':book', $book, PDO::PARAM_STR);      //Integer（数値の場合 PDO::PARAM_INT)
 $stmt->bindValue(':url', $url, PDO::PARAM_STR);    //Integer（数値の場合 PDO::PARAM_INT)
-$stmt->bindValue(':naiyou', $memo, PDO::PARAM_STR);  //Integer（数値の場合 PDO::PARAM_INT)
+$stmt->bindValue(':memo', $memo, PDO::PARAM_STR);  //Integer（数値の場合 PDO::PARAM_INT)
 $stmt->bindValue(':id', $id, PDO::PARAM_INT);  //Integer（数値の場合 PDO::PARAM_INT)
 $status = $stmt->execute(); //実行
 
